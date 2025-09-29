@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main(){
+	int num,last_digit,rest;
+	printf("Enter a 5 digit number: ");
+    scanf("%d",&num);
+
+last_digit = num % 10;
+rest = (num/10) - (2*last_digit);
+if (rest == 0 || rest == 7 || rest == -7){
+	printf("The number is divisible by 7.");
+return 0;
+}
+last_digit = rest % 10;
+rest = (rest/10) - (2*last_digit);
+if (rest == 0 || rest == 7 || rest == -7){
+	printf("The number is divisible by 7.");
+return 0;
+}
+last_digit = rest % 10;
+rest = (rest/10) - (2*last_digit);
+if (rest == 0 || rest == 7 || rest == -7){
+	printf("The number is divisible by 7.");
+return 0;
+}
+last_digit = rest % 10;
+rest = (rest/10) - (2*last_digit);
+if (rest == 0 || rest == 7 || rest == -7){
+	printf("The number is divisible by 7.");
+return 0;
+}
+last_digit = rest % 10;
+rest = (rest/10) - (2*last_digit);
+if (rest == 0 || rest == 7 || rest == -7){
+	printf("The number is divisible by 7.");
+}
+else{
+	printf("The number is not divisible by 7.");
+}
+return 0;
+}
