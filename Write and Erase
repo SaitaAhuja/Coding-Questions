@@ -1,0 +1,27 @@
+// Problem Statement
+// You are playing the following game with Joisino.
+// Initially, you have a blank sheet of paper.
+// Joisino announces a number. If that number is written on the sheet, erase the number from the sheet; if not, write the 
+// number on the sheet. This process is repeated N times.
+// Then, you are asked a question: How many numbers are written on the sheet now?
+// The numbers announced by Joisino are given as A1,...,AN in the order she announces them. How many numbers will be 
+// written on the sheet at the end of the game?
+
+#include<iostream>
+#include<set>
+using namespace std;
+int main(){
+    int t;
+    cin>>t;
+    set<int> s;
+    for(int i=0;i<t;i++){
+        int n;
+        cin>>n;
+     if (s.find(n)!=s.end())
+            s.erase(n);
+        else
+            s.insert(n);
+    }
+    cout<<s.size()<<endl;
+    return 0;
+}
